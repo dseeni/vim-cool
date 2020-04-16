@@ -124,3 +124,47 @@ endfunction
 call <SID>PlayItCool(0, &hlsearch)
 
 let &cpo = s:save_cpo
+
+fun CoolToggle()
+    if s:CoolHighTogVar == 0
+        let s:CoolHighTogVar = 1
+        call <sid>PlayItCool(1,0)
+        return
+    else
+        let s:CoolHighTogVar = 0
+        call <sid>PlayItCool(0,1)
+        return
+    endif
+endf
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
