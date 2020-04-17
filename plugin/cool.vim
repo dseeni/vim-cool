@@ -125,14 +125,17 @@ call <SID>PlayItCool(0, &hlsearch)
 
 let &cpo = s:save_cpo
 
-fun CoolToggle()
+let s:CoolHighTogVar = 0
+function! CoolToggle()
     if s:CoolHighTogVar == 0
         let s:CoolHighTogVar = 1
         call <sid>PlayItCool(1,0)
+        echo 'Vim Cool is OFF'
         return
     else
         let s:CoolHighTogVar = 0
         call <sid>PlayItCool(0,1)
+        echo 'Vim Cool is ON'
         return
     endif
 endf
