@@ -126,7 +126,7 @@ call <SID>PlayItCool(0, &hlsearch)
 let &cpo = s:save_cpo
 
 let s:CoolHighTogVar = 0
-function! CoolToggle()
+function! s:CoolToggle()
     if s:CoolHighTogVar == 0
         let s:CoolHighTogVar = 1
         call <sid>PlayItCool(1,0)
@@ -139,7 +139,7 @@ function! CoolToggle()
         return
     endif
 endf
-
+nnoremap <leader><leader>z :call <sid>CoolToggle()<cr>
 
 
 
