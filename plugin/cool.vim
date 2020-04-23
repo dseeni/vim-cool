@@ -1,9 +1,9 @@
 " vim-cool - Disable hlsearch when you are done searching.
-" Maintainer:	romainl <romainlafourcade@gmail.com>
-" Version:	0.0.2
-" License:	MIT License
-" Location:	plugin/cool.vim
-" Website:	https://github.com/romainl/vim-cool
+" Maintainer:   romainl <romainlafourcade@gmail.com>
+" Version:  0.0.2
+" License:  MIT License
+" Location: plugin/cool.vim
+" Website:  https://github.com/romainl/vim-cool
 
 if exists("g:loaded_cool") || v:version < 703 || &compatible
     finish
@@ -122,8 +122,9 @@ endfunction
 
 " play it cool
 call <SID>PlayItCool(0, &hlsearch)
-
 let &cpo = s:save_cpo
+
+" ######################################################### CUSTOM TOGGLE STUFF
 
 let s:CoolHighTogVar = 0
 function! s:CoolToggle()
@@ -139,7 +140,11 @@ function! s:CoolToggle()
         return
     endif
 endf
-nnoremap <leader><leader>z :call <sid>CoolToggle()<cr>
+
+" ##################################################### TOGGLE VIM COOL MAPPING
+" NOTE: SET YOUR COOL MAPING HERE
+command! VimCoolToggle call <sid>CoolToggle()
+
 
 
 
